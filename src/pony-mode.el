@@ -818,7 +818,7 @@ command is available, use that, otherwise fall back to manage.py runserver."
   (if (pony-command-exists-p "runserver_plus")
       (setq command "runserver_plus")
     (setq command "runserver"))
-  (let ((defualt-directory (pony-project-root)))
+  (let ((default-directory (pony-project-root)))
     (pony-manage-pop "ponyserver" (pony-manage-cmd)
                      (list command
                            (concat pony-server-host ":"  pony-server-port)))))
